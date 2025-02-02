@@ -36,6 +36,9 @@ elif [[ $1 == "track" ]]; then
     exit
 else
     echo "usage: spotifycli <command>"
+    echo ""
+    echo "available commands:"
+    echo ""
     echo "  activate    activate spotify"
     echo "  status      check if spotify app is running"
     echo "  play        play the song"
