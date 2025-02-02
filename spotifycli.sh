@@ -5,11 +5,7 @@ if [[ $1 == "activate" ]]; then
     exit
 elif [[ $1 == "status" ]]; then
     status_value=$(osascript -e 'tell application "System Events" to (name of processes) contains "Spotify"')
-    if [[ $status_value == "true" ]]; then
-        echo "spotify app is running"
-    else
-        echo "spotify app is off"
-    fi
+    [[ $status_value == "true" ]] && echo "running" || echo "off"
     exit
 elif [[ $1 == "play" ]]; then
     osascript -e 'tell application "Spotify" to play'
