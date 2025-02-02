@@ -28,6 +28,12 @@ make install
 ## usage
 
 ```
+spotifycli <command>
+```
+
+e.g.
+
+```
 spotifycli help
 ```
 
