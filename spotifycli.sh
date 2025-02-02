@@ -45,6 +45,7 @@ else
     echo "  restart     restart current track"
     echo "  track       show artist and song title"
     echo "  help        show help"
+    echo ""
     exit 0
 fi
 
