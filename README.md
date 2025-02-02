@@ -1,11 +1,13 @@
 # spotify-cli-macos
 A command line interface to Spotify on macOS
 
+If you're using Linux, see: [spotify-cli-linux](https://github.com/pwittchen/spotify-cli-linux)
+
 ## installation
 
 ```
 git clone https://github.com/pwittchen/spotify-cli-macos.git
-cd spotify-cli-macos 
+cd spotify-cli-macos
 make install
 ```
 
