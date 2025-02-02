@@ -2,34 +2,34 @@
 
 if [[ $1 == "activate" ]]; then
     osascript -e 'tell application "Spotify" to activate'
-    exit
+    exit 0
 elif [[ $1 == "status" ]]; then
     status_value=$(osascript -e 'tell application "System Events" to (name of processes) contains "Spotify"')
     [[ $status_value == "true" ]] && echo "running" || echo "off"
-    exit
+    exit 0
 elif [[ $1 == "play" ]]; then
     osascript -e 'tell application "Spotify" to play'
-    exit
+    exit 0
 elif [[ $1 == "pause" ]]; then
     osascript -e 'tell application "Spotify" to pause'
-    exit
+    exit 0
 elif [[ $1 == "playpause" ]]; then
     osascript -e 'tell application "Spotify" to playpause'
-    exit
+    exit 0
 elif [[ $1 == "restart" ]]; then
     osascript -e 'tell application "Spotify" to set player position to 0'
-    exit
+    exit 0
 elif [[ $1 == "next" ]]; then
     osascript -e 'tell application "Spotify" to next track'
-    exit
+    exit 0
 elif [[ $1 == "prev" ]]; then
     # it has to be invoked twice, otherwise it goes to the beginning of the current track
     osascript -e 'tell application "Spotify" to previous track'
     osascript -e 'tell application "Spotify" to previous track'
-    exit
+    exit 0
 elif [[ $1 == "track" ]]; then
     osascript -e 'tell application "Spotify" to name of current track & " - " & artist of current track'
-    exit
+    exit 0
 else
     echo "usage: spotifycli <command>"
     echo ""
