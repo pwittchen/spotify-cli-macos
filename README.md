@@ -1,6 +1,8 @@
 # spotify-cli-macos
 A command line interface to Spotify on macOS
 
+Please note: you need to have Spotify desktop app installed on your computer in order to use this script
+
 If you're using Linux, see: [spotify-cli-linux](https://github.com/pwittchen/spotify-cli-linux)
 
 ## installation
