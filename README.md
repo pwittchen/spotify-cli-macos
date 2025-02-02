@@ -39,7 +39,7 @@ e.g.
 spotifycli help
 ```
 
-all available parameters:
+all available commands:
 
 ```
 activate    activate spotify
@@ -51,5 +51,6 @@ next        play next track
 prev        play previous track
 restart     restart current track
 track       show artist and song title
+quit        quit spotify
 help        show help
 ```
