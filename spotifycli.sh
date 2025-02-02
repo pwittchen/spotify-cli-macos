@@ -30,6 +30,9 @@ elif [[ $1 == "prev" ]]; then
 elif [[ $1 == "track" ]]; then
     osascript -e 'tell application "Spotify" to name of current track & " - " & artist of current track'
     exit 0
+elif [[ $1 == "quit" ]]; then
+    osascript -e 'tell application "Spotify" to quit'
+    exit 0
 else
     echo "usage: spotifycli <command>"
     echo ""
@@ -44,6 +47,7 @@ else
     echo "  prev        play previous track"
     echo "  restart     restart current track"
     echo "  track       show artist and song title"
+    echo "  quit        quit spotify"
     echo "  help        show help"
     echo ""
     exit 0
