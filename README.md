@@ -54,3 +54,15 @@ track       show artist and song title
 quit        quit spotify
 help        show help
 ```
+
+## Claude Code skill
+
+This repo ships a [Claude Code](https://claude.com/claude-code) skill at `.claude/skills/spotify/SKILL.md`. When Claude Code is run from this directory, you can drive Spotify in natural language:
+
+```
+/spotify what's playing
+/spotify pause
+/spotify next track
+```
+
+The skill assumes `spotifycli` is on `PATH`, so run `make install` first.
