@@ -55,6 +55,39 @@ quit        quit spotify
 help        show help
 ```
 
+## MCP server
+
+This repo also ships an MCP (Model Context Protocol) server at `mcp/spotifycli-mcp.sh` that exposes every `spotifycli` command as an MCP tool, so any MCP client (Claude Desktop, Claude Code, etc.) can drive Spotify.
+
+Install both the CLI and the MCP server:
+
+```
+make install
+make install-mcp
+```
+
+Then register it with your MCP client. Example for Claude Desktop (`~/Library/Application Support/Claude/claude_desktop_config.json`):
+
+```json
+{
+  "mcpServers": {
+    "spotify": {
+      "command": "/usr/local/bin/spotifycli-mcp"
+    }
+  }
+}
+```
+
+Or with Claude Code:
+
+```
+claude mcp add spotify /usr/local/bin/spotifycli-mcp
+```
+
+The server is a Bash script that shells out to `spotifycli`; it requires `jq` (preinstalled on macOS 15+) and `spotifycli` on `PATH`.
+
+To uninstall: `make uninstall-mcp`.
+
 ## Claude Code skill
 
 This repo ships a [Claude Code](https://claude.com/claude-code) skill at `.claude/skills/spotify/SKILL.md`. When Claude Code is run from this directory, you can drive Spotify in natural language:
